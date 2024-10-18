@@ -3,7 +3,7 @@ body {
     font-size: 16px;
     font-weight: 400px;
     color: #0F141E;
-    background: #F1F1F1;
+    background-color: var(--home-color);
 }
 
 .container {
@@ -43,7 +43,7 @@ body {
 }
 
 .life {
-    background: lightblue;
+    background-color: var(--list-color);
     width: 700px;
 }
 
@@ -58,7 +58,7 @@ body {
 }
 
 .dream {
-    background: lightgreen;
+    background-color: var(--table-color);
     width: 700px;
 }
 
@@ -83,6 +83,15 @@ a {
     padding: 10px 15px;
     border-radius: 10px;
     text-decoration: none;
+}
+
+#themes {
+    background: #888;
+    color: #fff;
+    padding: 10px 15px;
+    width: 10em;
+    border-radius: 10px;
+    font-family: sans-serif
 }
 
 a:hover {
