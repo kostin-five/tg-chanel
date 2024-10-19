@@ -7,21 +7,6 @@
     <meta name="keywords" content="канал, жизнь, спорт, учёба">
     <meta name="description" content="Мой канал">
     <link rel="stylesheet" href="index.css">
-    <style>
-        :root {
-            --home-color: #F1F1F1;
-            --list-color: lightgreen;
-            --table-color: lightblue;
-
-        }
-
-        :root[themes='dark'] {
-            --home-color: #222;
-            --list-color: #777;
-            --table-color: #999;
-    
-            }
-    </style>
 </head>
 <body>
     <div class="container">
@@ -32,7 +17,7 @@
                 <p><strong>Канал</strong> был создан в целях освещения моей жизни.<br>Здесь вы увидите всё: <em>мою жизнь, учебу, саморазвитие, тренировки и много всего другого...</em></p>
                 <h4>Ссылка на него:</h4>
                 <a href="https://t.me/kostin_5ive" target="_blank">Telegram-канал</a>
-                <input type="button" id="themes" value="Тёмная тема">
+                <input type="button" id="themes" value="Dark theme"/>
             </div>
         </div>
         <div class="card life">
@@ -104,14 +89,17 @@
         <br><br><br><br>
     </div>
     <script>
-        const themesBtn = document.querySelector('#themes');
-        themesBtn.addEventListener("click", function () {
-            if (document.documentElement.hasAttribute("theme")) {
-                document.documentElement.removeAttribute("theme")
-            } else {
-                document.documentElement.setAttribute("theme", "dark");
-            }
-        })
+        const toggleBtn = document.querySelector("#themes");
+        toggleBtn.addEventListener("click", function() {
+          if(document.documentElement.hasAttribute("theme")){
+            document.documentElement.removeAttribute("theme");
+            toggleBtn.value = "Black theme"
+          }
+          else{
+            document.documentElement.setAttribute("theme", "dark");
+            toggleBtn.value = "White theme"
+          }
+        });
     </script>
 </body>
 </html>
